@@ -1,0 +1,545 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-top: 100px;
+}
+main {
+  padding-top: 110px;
+}
+
+a {
+  text-decoration: none;
+  color: #003366;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Header */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 940;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #003366;
+  padding: 1rem 2rem;
+  color: white;
+  height: 80px;
+  background-size: cover;
+}
+
+/* Logo on the left */
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.logo-img {
+  height: 90px;
+  width: 100px;
+  border-radius: 130px;
+}
+
+/* Menu in center */
+.menu {
+  flex: 1; /* Takes remaining space */
+  display: flex;
+  justify-content: center;
+}
+
+/* Menu list */
+.menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu links */
+.menu ul li a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 8px 9px; /* optional padding for better hover area */
+}
+.menu ul li a:hover {
+  background-color: yellow;
+  color: #003366; /* Optional: change text color for contrast */
+  padding: 5px 10px; /* Optional: to avoid tight box */
+  border-radius: 5px; /* Optional: for rounded corners */
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+/* Section Styling */
+section {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding-top: 160px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  background-color: #033363;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003366;
+}
+
+.btn.primary {
+  background-color: #003366;
+}
+/* Background fade-in effect */
+.background {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Text slide-in */
+.background-text h1 {
+  opacity: 0;
+  animation: slideDown 1.5s ease forwards;
+}
+
+.background-text p {
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 0.5s; /* delay for nice stagger */
+}
+
+.background-text .btn {
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 1s; /* button appears last */
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*---------why choose us?-------------------*/
+.why-choose-container {
+  background-color: #f0f0f0;
+  border: 2px solid #555555;
+  outline: 3px solid  #003366;
+  border-radius: 20px;
+  padding: 20px;
+  padding-left: 5px;
+  margin: 0 auto;  /* <-- Center horizontally */
+  width: 98%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, outline-color 0.3s ease;
+}
+
+
+.why-choose-container:hover {
+  border-color: #d4af37;            /* dark yellow on hover */
+  outline-color: #d4af37;           /* dark yellow outline on hover */
+}
+
+.why-choose {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;                   /* center the inner content */
+}
+
+.why-choose h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.why-choose li {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .why-choose h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .why-choose ul {
+    grid-template-columns: 1fr;
+  }
+}
+.why-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.why-columns li {
+  background-color: rgba(0, 0, 0, 0.1);;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive stack on smaller screens */
+@media (max-width: 768px) {
+  .why-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*---------------what we can do------------*/
+.services-preview {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.4rem;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services-preview h2{
+ font-size: 2.5rem; 
+}
+.service-card h3 {
+   font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #d4af37;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    max-width: 90%;
+  }
+}
+/*-----------------start----------------------*/
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.get-started {
+  background-image: url('/images/banner.jpeg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: stretch; /* Allow children to grow vertically */
+}
+
+.get-started-container {
+  width: 50%;
+  height: 100%;               /* Take full height of parent */
+  padding-left: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.text-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: darkens background for readability */
+  padding: 30px;
+  max-width: 500px;
+  border-radius: 30px;
+  height: 60%;
+}
+
+.text-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 18px;
+  padding: 25px;
+}
+
+.text-content p {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.btn.primary {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn.primary:hover {
+  background-color: #0056b3;
+  color: yellow;
+}
+
+/* FAQ */
+.faq details {
+  margin: 1.5rem auto;
+  text-align: left;
+  max-width: 700px;
+  background-color: #eef2f5;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+.faq h2{
+  font-size: 2.5rem;
+}
+
+.text-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  max-width: 500px;
+  border-radius: 30px;
+  height: 60%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-content:hover {
+  transform: translateY(-10px) scale(1.03); /* moves up + grows slightly */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45); /* deeper shadow */
+}
+
+
+/* -------------------------Footer-------------------- */
+.footer {
+  background-color: #003366;
+  color: white;
+  padding: 2rem 1rem 1rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.4rem;
+}
+
+.footer-section a:hover {
+  color:yellow;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  color: #aaa;
+}
+
+.footer-section a {
+  color: #cccccc;
+  text-decoration: none;
+  display: block;
+  margin: 0.4rem 0;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: yellow;
+}
+
+.footer-section a i {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #cccccc;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover i {
+  color: yellow;
+}
+
+/*-----------------------------BACKGROUND-----------------*/
+
+.background {
+  max-width: 100%;
+  height: 500px;
+  background-image: url('/images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.background {
+  position: relative;
+  max-width: 100%;
+  height: 500px;
+  background-image: url('/images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark transparent layer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-text {
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.background-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.background-text p{
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.background-text .btn {
+  padding: 0.8rem 1.6rem;       /* Increased padding */
+  background-color: #0056b3;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  font-size: 1.1rem;             /* Slightly larger text */
+}
+
+.background-text .btn:hover {
+  background-color: #004a99;    /* Slightly darker on hover */
+  color: yellow;                /* Hover text color */
+}
+
+

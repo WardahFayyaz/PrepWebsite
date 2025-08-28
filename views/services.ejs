@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Banners</title>
+  <link rel="stylesheet" href="/css/services.css">
+</head>
+<body>
+    <header>
+    <%- include('header') %>
+</header>
+<!-- HTML -->
+<div class="intro-wrapper">
+  <div class="services-intro">
+    <h2>Our Services...</h2>
+    <p>
+      Discover a range of professional services including FBA Prep, FBM Prep, Warehousing & Storage, and E-commerce support. Each service is tailored to streamline your business operations and boost your efficiency.
+    </p>
+  </div>
+</div>
+
+<section class="banners">
+  <!-- FBA PREP -->
+  <div class="banner banner1">
+    <div class="banner-content">
+      <h3>FBA PREP</h3>
+      <button class="details-btn">
+        <span class="btn-text">Details</span>
+        <span class="arrow">▼</span>
+      </button>
+    </div>
+    <div class="service-detail hidden">
+      <p>
+        <strong>Full Amazon FBA Prep:</strong> We handle labeling, bundling, poly bagging, inspection, and shipment creation — ensuring your products meet all of Amazon’s standards.
+      </p>
+    </div>
+  </div>
+
+  <!-- FBM PREP -->
+  <div class="banner banner2">
+    <div class="banner-content">
+      <h3>FBM PREP</h3>
+      <h4>(Coming Soon)</h4>
+      <button class="details-btn">
+        <span class="btn-text">Details</span>
+        <span class="arrow">▼</span>
+      </button>
+    </div>
+    <div class="service-detail hidden">
+      <p>
+        <strong>Upcoming FBM Support:</strong> Get ready for pick, pack, and direct shipping to your customers. Perfect for sellers managing their own fulfillment.
+      </p>
+    </div>
+  </div>
+
+  <!-- WAREHOUSING -->
+  <div class="banner banner3">
+    <div class="banner-content">
+      <h3>Warehousing & Storage</h3>
+      <button class="details-btn">
+        <span class="btn-text">Details</span>
+        <span class="arrow">▼</span>
+      </button>
+    </div>
+    <div class="service-detail hidden">
+      <p>
+        <strong>Secure Storage Solutions:</strong> Climate-controlled warehouses with flexible plans for short-term and long-term inventory storage needs.
+      </p>
+    </div>
+  </div>
+
+  <!-- E-COMMERCE -->
+  <div class="banner banner4">
+    <div class="banner-content">
+      <h3>E-commerce</h3>
+      <h4>(Coming Soon)</h4>
+      <button class="details-btn">
+        <span class="btn-text">Details</span>
+        <span class="arrow">▼</span>
+      </button>
+    </div>
+    <div class="service-detail hidden">
+      <p>
+        <strong>End-to-End E-commerce Support:</strong> Product handling, packaging, fulfillment, and returns for Amazon, Shopify, eBay and more.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+    <%- include('footer.ejs') %>
+</footer>
+  <script>
+  const buttons = document.querySelectorAll('.details-btn');
+  const detailSections = document.querySelectorAll('.service-detail');
+
+  buttons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      const detail = detailSections[index];
+      const isOpen = detail.classList.contains('show');
+
+      // Close all
+      detailSections.forEach(d => d.classList.remove('show'));
+      buttons.forEach(b => {
+        b.classList.remove('active');
+        b.querySelector('.btn-text').textContent = 'Details';
+      });
+
+      // Toggle selected
+      if (!isOpen) {
+        detail.classList.add('show');
+        btn.classList.add('active');
+        btn.querySelector('.btn-text').textContent = 'Read Less';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

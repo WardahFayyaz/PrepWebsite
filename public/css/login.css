@@ -1,0 +1,67 @@
+.login-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    color: black;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+.login-container input {
+    width: 100%;
+    padding: 19px 15px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: transparent;
+    color: black;
+    outline: none;
+    font-size: 21px;
+}
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+}
+
+.login-container h2{
+    color: black;
+    font-size: 55px;
+}
+
+header, footer {
+    flex-shrink: 0; /* Keep header & footer fixed in layout */
+}
+
+main {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers login vertically */
+    padding: 40px 0; /* Space from header and footer */
+}
+
+.login-container p{
+    color: #1e3c72;
+    font-size: 20px;
+}
+.loginform{
+    padding-top: 160px;
+    padding-bottom: 50px;
+    padding-left: 550px;
+    justify-content: center;
+}

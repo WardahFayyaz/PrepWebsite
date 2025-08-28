@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FBA Prep Center</title>
+  <link rel="stylesheet" href="css/fbaprep.css">
+</head>
+<body>
+    <header>
+    <%- include('header') %>
+</header>
+  <!-- Hero Section with Background Image -->
+  <div class="hero"></div>
+
+  <!-- Centered Text Content -->
+  <div class="content">
+    <h1>FBA Prep Center</h1>
+    <p>We understand the unique challenges Amazon Sellers face, and we’re here to simplify the process and enhance your success.</p>
+    <p>Our FBA prep center services meet the specific needs of sellers. We specialize in efficiently preparing your products for shipment to Amazon warehouses, ensuring compliance with Amazon’s stringent requirements.</p>
+  </div>
+
+  <section class="fba-section">
+  <div class="fba-section-inner">
+    <div class="fba-text">
+      <h2>Why FBA Prep Centers Matter for Amazon Sellers?</h2>
+      <p>
+        Amazon FBA Prep Centers are essential partners for e-commerce sellers, streamlining inventory processing and ensuring all products meet Amazon’s requirements. By outsourcing these tasks, sellers save valuable time, avoid costly errors, and ensure faster delivery to customers. Here are a few key reasons why using a prep center can elevate your Amazon business operations and boost overall efficiency.
+      </p>
+    </div>
+    <div class="fba-image">
+      <img src="/images/sideimg.jpeg" alt="Warehouse worker preparing FBA shipments">
+    </div>
+  </div>
+</section>
+    
+  <section class="prep-steps-section">
+    <div class="prep-steps-container">
+      <h2>How a Prep Center Works?</h2>
+      <div class="prep-steps">
+        <div class="step">
+          <div class="step-icon">📦</div>
+          <div class="step-title">Inventory Arrival</div>
+          <div class="step-desc">Your supplier ships the products directly to the prep center’s warehouse.</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">🔍</div>
+          <div class="step-title">Inspection & Quality Check</div>
+          <div class="step-desc">Every item is checked for damage, accuracy, and compliance with Amazon standards.</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">🏷️</div>
+          <div class="step-title">Labeling & Packaging</div>
+          <div class="step-desc">Items are labeled with FNSKU or barcodes and packed according to Amazon’s FBA requirements.</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">🚚</div>
+          <div class="step-title">Shipment to FBA</div>
+          <div class="step-desc">Prepared inventory is sent to Amazon fulfillment centers, ready for sale.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+<section class="pricing-section">
+    <div class="pricing-overlay">
+        <h2>Pricing</h2>
+        <p class="subtitle">Are you considering our services?</p>
+        <p class="description">
+            We understand that every Amazon Seller has unique requirements, so we offer various 
+            pricing options to accommodate your business size and goals.
+        </p>
+        <a href="/pricing" class="pricing-btn">
+            💲 Explore our competitive pricing options
+        </a>
+    </div>
+</section>
+<section id="testimonials" class="testimonials-section">
+  <div class="testimonials-inner">
+    <h2>Testimonials</h2>
+    <p class="subtitle">Hear from some of our happy clients who have benefited from our services.</p>
+
+    <div class="testimonials-grid">
+      <!-- First 3 (always visible) -->
+      <article class="testimonial-card">
+        <p>"I can't express how much this service transformed my Amazon business..."</p>
+        <div class="author">
+          <div class="author-info">
+            Sarah T. <span class="stars">★★★★★</span>
+          </div>
+          <img src="images/sara.jpg" alt="Sarah T." class="author-img">
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <p>"Their team is professional and extremely responsive — game changer for my e-commerce business."</p>
+        <div class="author">
+          <div class="author-info">
+            Michael A. <span class="stars">★★★★★</span>
+          </div>
+          <img src="images/micheal.jpg" alt="Michael A." class="author-img">
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <p>"Exceptional service and competitive pricing. My business has grown significantly."</p>
+        <div class="author">
+          <div class="author-info">
+            Emily R. <span class="stars">★★★★</span>
+          </div>
+          <img src="images/emily.avif" alt="Emily R." class="author-img">
+        </div>
+      </article>
+
+      <!-- Next 3 (hidden until click) -->
+      <article class="testimonial-card hidden-review">
+        <p>"The logistics solutions provided saved me both time and money."</p>
+        <div class="author">
+          <div class="author-info">
+            David K. <span class="stars">★★★★★</span>
+          </div>
+          <img src="images/david.jpg" alt="David K." class="author-img">
+        </div>
+      </article>
+
+      <article class="testimonial-card hidden-review">
+        <p>"Their attention to detail is unmatched. I always recommend them to my peers."</p>
+        <div class="author">
+          <div class="author-info">
+            Lisa W. <span class="stars">★★★★★</span>
+          </div>
+          <img src="images/lisa.jpg" alt="Lisa W." class="author-img">
+        </div>
+      </article>
+
+      <article class="testimonial-card hidden-review">
+        <p>"I’ve been able to scale faster thanks to their reliable services."</p>
+        <div class="author">
+          <div class="author-info">
+            James B. <span class="stars">★★★★</span>
+          </div>
+          <img src="images/james.jpg" alt="James B." class="author-img">
+        </div>
+      </article>
+    </div>
+
+    <button class="toggle-reviews">↓ See More</button>
+  </div>
+</section>
+
+<script>
+const toggleBtn = document.querySelector(".toggle-reviews");
+const hiddenReviews = document.querySelectorAll(".hidden-review");
+
+toggleBtn.addEventListener("click", function() {
+  const isHidden = hiddenReviews[0].style.display === "" || hiddenReviews[0].style.display === "none";
+
+  hiddenReviews.forEach(card => {
+    card.style.display = isHidden ? "flex" : "none";
+  });
+
+  toggleBtn.textContent = isHidden ? "↑ See Less" : "↓ See More";
+});
+</script>
+
+<footer>
+    <%- include('footer') %>
+</footer>
+
+</body>
+</html>

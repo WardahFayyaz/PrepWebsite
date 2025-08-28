@@ -1,0 +1,188 @@
+.banners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 180px 40px 40px;
+  background: #f7f7f7;
+  border-radius: 15px;
+}
+
+/* Common styles for all banners */
+.banner {
+  position: relative;
+  width: 615px;
+  height: 400px;
+  border-radius: 15px;
+  border: 3px solid transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner:hover {
+  border-color: gold;
+}
+
+/* Dark overlay for text readability */
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Background images */
+.banner1 {
+  background: url('/images/fba.jpeg') center/cover no-repeat;
+}
+.banner2 {
+  background: url('/images/fbm.avif') center/cover no-repeat;
+}
+.banner3 {
+  background: url('/images/ws.png') center/cover no-repeat;
+}
+.banner4 {
+  background: url('/images/e-commerce.webp') center/cover no-repeat;
+}
+
+/* Content inside the banner */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding-left: 100px;
+}
+
+.banner-content h3 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.details-btn:hover {
+  background: gold;
+  border-color: gold;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .banners {
+    padding: 60px 20px 30px;
+  }
+  .banner {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .banners {
+    padding: 40px 15px 20px;
+  }
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.service-detail {
+  background: linear-gradient(135deg, #051537, #061d4b);
+  padding: 20px 25px;
+  margin-top: 15px;
+  border-radius: 12px;
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.service-detail.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.details-btn {
+  background: #003366;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.details-btn:hover {
+  background: #ffd633;
+}
+
+.details-btn .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-btn.active .arrow {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  display: block; /* allow layout but control with height/opacity */
+}
+
+/*-----------About us intro--------*/
+/* Full-width grey background */
+.intro-wrapper {
+  background: #f0f0f0;
+  width: 100%;
+  padding: 150px 0 50px; /* More top padding */
+}
+
+/* Centered content inside the grey background */
+.services-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+.services-intro h2 {
+  font-size: 3.3rem;
+  margin-bottom: 28px;
+  color: #222;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.services-intro p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.banners{
+  margin-top: 40px;
+ padding-top: 0;
+}
+
+
+
+
+
+
+

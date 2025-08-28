@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contact.css">
+
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required maxlength="100">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required maxlength="1000" placeholder="Tell us how we can help you..."></textarea>
+                <div class="char-count" id="charCount">0 / 1000 characters</div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Send Message
+            </button>
+        </form>
+
+        <div id="messageDiv"></div>
+    </div>
+
+    <script>
+    const form = document.getElementById('contactForm');
+    const messageDiv = document.getElementById('messageDiv');
+    const submitBtn = document.getElementById('submitBtn');
+    const messageTextarea = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+
+    // Character counter
+    messageTextarea.addEventListener('input', function() {
+        const length = this.value.length;
+        charCount.textContent = `${length} / 1000 characters`;
+        
+        if (length > 900) {
+            charCount.style.color = '#f44336';
+        } else if (length > 800) {
+            charCount.style.color = '#ff9800';
+        } else {
+            charCount.style.color = '#666';
+        }
+    });
+
+    // Form submission
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = {
+            name: formData.get('name').trim(),
+            email: formData.get('email').trim(),
+            message: formData.get('message').trim()
+        };
+
+        // Basic validation
+        if (data.name.length < 2 || data.name.length > 100) {
+            showMessage('Name must be between 2 and 100 characters.', 'error');
+            return;
+        }
+
+        if (data.message.length < 10 || data.message.length > 1000) {
+            showMessage('Message must be between 10 and 1000 characters.', 'error');
+            return;
+        }
+
+        // Show loading state
+        submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch('/contact', {   // ✅ relative URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                showMessage(result.message, 'success');
+                form.reset();
+                charCount.textContent = '0 / 1000 characters';
+            } else {
+                const errorMessages = result.errors 
+                    ? result.errors.map(err => err.msg).join(', ')
+                    : result.message;
+                showMessage(errorMessages, 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('Network error. Please check if the server is running and try again.', 'error');
+        } finally {
+            // Reset button state
+            submitBtn.innerHTML = 'Send Message';
+            submitBtn.disabled = false;
+        }
+    });
+
+    function showMessage(text, type) {
+        messageDiv.innerHTML = `<div class="message ${type}">${text}</div>`; // ✅ fixed template literal
+        setTimeout(() => {
+            messageDiv.innerHTML = '';
+        }, 5000);
+    }
+
+    // Add some nice animations on load
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.container');
+        container.style.opacity = '0';
+        container.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            container.style.transition = 'all 0.6s ease';
+            container.style.opacity = '1';
+            container.style.transform = 'translateY(0)';
+        }, 100);
+    });
+</script>
+
+</body>
+</html>

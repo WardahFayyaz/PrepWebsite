@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Prep Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/about.css">
+</head>
+<body>
+
+      <header>
+       <%- include('header') %>
+      </header>
+
+  <!-- Hero Section -->
+  <section class="hero-sec">
+    <h1 class="hero1">Global E-commerce Prep Solutions</h1>
+    <p class="hero">Reliable, FBA-compliant prep services tailored for Amazon and other marketplaces.</p>
+    <a href="/services" class="hero-btn">Explore Our Services</a>
+  </section>
+
+  <!-- Who We Are -->
+<section class="who">
+  <div class="who-container">
+    <div class="who-text">
+      <h2>Who We Are?</h2>
+      <p>
+        We’re a professional prep center helping e-commerce sellers streamline their fulfillment process. Our 
+         warehouse team ensures every product is received, 
+         prepped, and shipped efficiently and compliantly  — so you can focus on growth.
+      </p>
+    </div>
+    <div class="who-image">
+      <img src="/images/who.jpeg" alt="Who We Are" />
+    </div>
+  </div>
+</section>
+
+  <!-- Why Sellers Choose Us (Dark Gradient) -->
+<section class="dark-section">
+  <div class="container">
+    <h2 class="choose">Why Sellers Choose Us...</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Speed">
+        <h3>Fast Turnaround</h3>
+        <p>We prep and ship quickly so you never miss a deadline.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="FBA">
+        <h3>FBA Compliant</h3>
+        <p>We meet Amazon and marketplace guidelines every step of the way.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Support">
+        <h3>Great Support</h3>
+        <p>Our team stays in touch and solves issues proactively.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Overview -->
+  <section>
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Receiving & Inspection</h3>
+        <p>Careful unpacking and checking of all incoming stock.</p>
+      </div>
+      <div class="card">
+        <h3>Labeling & Barcoding</h3>
+        <p>We apply FNSKU, UPC, and custom barcodes as needed.</p>
+      </div>
+      <div class="card">
+        <h3>Bundling & Kitting</h3>
+        <p>Combine items into one sellable unit with care and accuracy.</p>
+      </div>
+      <div class="card">
+        <h3>Storage</h3>
+        <p>Affordable and secure short- and long-term storage options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section id="how-we-work">
+    <h2>How We Work?</h2>
+    <div class="steps">
+      <div class="step"><strong>Step 1:</strong> Ship inventory to our warehouse.</div>
+      <div class="step"><strong>Step 2:</strong> We inspect, label, bundle and prep your items.</div>
+      <div class="step"><strong>Step 3:</strong> Items are packed and shipped to Amazon or your chosen location.</div>
+    </div>
+  </section>
+
+  <!-- Trusted By -->
+  <section class="trusted">
+    <h2 class="trustedby">Trusted By</h2>
+    <div class="logos">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png" alt="Amazon Logo">
+   <img src="/images/Walmart.jpeg" alt="Walmart Logo">
+  <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" alt="Shopify Logo">
+</div>
+  </section>
+
+  <!-- Call to Action (Dark Blue & Modern) -->
+  <section class="cta">
+    <h2>Let Us Handle the Logistics</h2>
+    <p class="handle">Join hundreds of successful sellers today. We’ll take care of the rest.</p>
+    <button><a href="/login">Get Started</a></button>
+  </section>
+
+   <footer>
+    <%- include('footer') %>
+</footer>
+</body>
+</html>

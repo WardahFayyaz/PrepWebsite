@@ -1,0 +1,95 @@
+    <link rel="stylesheet" href="/css/pricing.css">
+    <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <header>
+    <%- include('header') %>
+</header>
+<section class="pricing-section">
+    <div class="pricing-content">
+      <div class="text-column">
+         <p class="section-label">Prep pricing</p>
+         <h1 class="main-heading">Smart cost <br> Smarter prep.</h1>
+         <p class="description">
+             Fuel your FBA operations with Amazon’s leading <br> prep partner. As world’s largest FBA prep provider,<br> 
+             our team of 200+ Amazon specialists ensures your <br> growth is seamless and stress-free.</p>
+             <a href="/login" class="get-pricing-btn">Get Pricing</a>
+      </div>
+
+    <div class="image-container">
+        <div class="image-box top-image">
+          <img src="/images/pricing1.jpeg" alt="First Image">
+        </div>
+         <div class="image-box bottom-image">
+           <img src="/images/pricing2.jpeg" alt="Second Image">
+         </div>
+     </div>
+  </div>
+  <div class="award-banner">
+    <i class="fas fa-award"></i> Canada Prep named Top FBA Prep Center in 2025 by Golden Seller Awards
+  </div>
+
+  <div class="fba-prep-wrapper">
+  <div class="fba-prep-section">
+    <p class="prep-subtitle">FBA prep pricing</p>
+    <h2 class="prep-title">Zero placement fees.Full Amazon prep power.</h2>
+    <p class="prep-description">
+      Simple pricing that covers all your FBA preparation needs...
+    </p>
+
+    <div class="prep-features">
+      <div class="feature-item">✔ 1–3 days to Amazon</div>
+      <div class="feature-item">✔ On-Site FBA manager</div>
+      <div class="feature-item">✔ Zero placement fees</div>
+      <div class="feature-item">✔ Auto-generate shipping plans</div>
+      <div class="feature-item">✔ Support via Slack, Email, and Phone</div>
+      <div class="feature-item">✔ + many more...</div>
+    </div>
+  </div>
+
+  <div class="form-box">
+    <div class="tab-buttons">
+      <button id="itemBtn" class="active">Item level prep</button>
+      <button id="caseBtn">Case forwarding</button>
+    </div>
+    <div id="priceContent" class="price-content">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</div>
+ <!--AI powered-->
+ <div class="ai-container">
+  <div class="ai-left">
+    <p class="label">FBA prep tech</p>
+    <h1>Powered by AI,<br>built by ex-Amazon,<br> engineers</h1>
+    <p class="desc">
+      Our proprietary FBA prep software transforms complex logistics into
+      seamless, intelligent<br> operations. by a team of Amazon
+      experts, this platform does the heavy <br> so you can focus on growth.
+    </p>
+    <a href="#" class="cta">See the FBA Prep app in action (1 min)</a>
+  </div>
+</div>
+<div class="ai-right">
+  <ul>
+    <li data-aos="fade-up"><span class="icon">&#10004;</span> Automatically generate shipping plans ,more emails or spreadsheets complete shipment creation happens instantly</li>
+    <li data-aos="fade-up" data-aos-delay="100"><span class="icon">&#10004;</span>Real-time visibility into your entire inventory across warehouses and Amazon. Track every SKU with a single click. </li>
+    <li data-aos="fade-up" data-aos-delay="200"><span class="icon">&#10004;</span>Prep for multiple marketplaces seamlessly. Amazon, Walmart, and beyond—all handled with precision. </li>
+    <li data-aos="fade-up" data-aos-delay="300"><span class="icon">&#10004;</span>Eliminate placement fees with AI-powered smart routing. Consolidated shipments, fastest inbound speeds, zero extra charges. </li>
+    <li data-aos="fade-up" data-aos-delay="400"><span class="icon">&#10004;</span>Manage global inventory with unprecedented insight. Track and optimize stock across multiple prep centers worldwide.</li>
+  </ul>
+</div>
+
+<script src="/script.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+</section>
+<footer>
+    <%- include('footer.ejs') %>
+</footer>

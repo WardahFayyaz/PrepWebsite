@@ -1,0 +1,124 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada Prep Solution - Home</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <!-- ✅ Add Font Awesome CDN below -->
+  <link rel="stylesheet" href="your-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+    <%- include('header') %>
+</header>
+
+    <!-- Main Image Banner -->
+  <section class="background">
+  <div class="overlay">
+    <div class="background-text">
+      <h1>Welcome to Canada Prep Solution</h1>
+      <p>United Prep stands as Canada’s premier FBA Prep Center, empowering businesses by offering <br>  
+        third party logistics (3PL) solutions, ensuring seamless integration with Amazon’s platform.<br>  By entrusting United  Prep,
+        you can be rest assured that it will meet Amazon’s steadfast <br> requirements , enabling you to streamline
+          your Amazon fulfillment process.</p>
+      <a href="/services" class="btn">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+   
+    <!-- Why Choose Us -->
+  <section class="why-choose-container">
+  <div class="why-choose">
+    <h2>Why Choose Us?</h2>
+    <ul class="why-columns">
+      <li><strong>Tailored Preparation for Canadian Programs:</strong> We equip you for academic, immigration, and career success in Canada.</li>
+      <li><strong>Expert Team with Real-World Experience:</strong> Get guidance from professionals who understand Canadian systems inside out.</li>
+      <li><strong>Flexible & Affordable Plans:</strong> Study at your pace with packages that fit your needs and budget.</li>
+      <li><strong>1000+ Global Success Stories:</strong> Join a growing list of clients who’ve successfully reached their Canadian goals.</li>
+    </ul>
+  </div>
+</section>
+
+    <!-- What We Can Do For You -->
+<section class="services-preview">
+  <h2>What We Can Do For You</h2>
+  <p>Your products. Our mission. Anywhere in the world</p>
+
+  <div class="service-cards">
+    <div class="service-card">
+      <h3>Sending Your Products to RGX</h3>
+      <p>
+        We provide clear instructions for packaging and all shipping labels, and once your items arrive at our facilities, our team ensures they are logged, inspected, and stored safely, giving you peace of mind.
+      </p>
+      <a class="card-btn" href="/pricing">Pricing</a>
+    </div>
+
+    <div class="service-card">
+      <h3>Inventory Management</h3>
+      <p>
+        Our advanced inventory system offers real-time visibility into your stock levels. It tracks every item, guaranteeing accuracy throughout your inventory, making it a breeze for the fulfillment team to manage and fulfill orders.
+      </p>
+      <a class="card-btn" href="/services">Our Services</a>
+    </div>
+  </div>
+</section>
+
+    <!-- Let's Get Started -->
+    <section class="get-started">
+  <div class="get-started-container">
+    <div class="text-content">
+      <h2>Let’s Get Started</h2>
+      <p>Begin your journey to Canada <br>today. Access our services<br> & client portal below.</p>
+      <a class="btn primary" href="/login">Login</a>
+    </div>
+  </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>How much does an Canada prep center cost?</summary>
+            <p>The cost of Canada prep services can vary widely based on several factors, 
+                including the type of product, the specific prep services needed, the volume of products,
+                 and the prep service provider you choose.</p>
+        </details>
+        <details>
+            <summary>What is a Canada prep center?</summary>
+            <p>A Canada prep center offers a comprehensive service where they receive and prepare your inventory before shipping
+                 it to Canada’s prep fulfillment centers. 
+                This service includes tasks such as bubble wrapping, bagging, labeling, packaging, and handling the shipping process..</p>
+        </details>
+        <details>
+            <summary>I have more questions, where should I go?</summary>
+            <p>We are the largest FBA Prep provider, specializing in temperature-controlled products such as frozen goods, chocolates,
+                 and probiotics. Our services include bulk storage, poly bagging, labeling, and strict compliance with Amazon’s meltable 
+                 guidelines. With facilities across North America, we ensure your products are stored, prepped, and shipped safely and
+                  efficiently.<p>
+        </details>
+        <details>
+            <summary>What is FBA and FBM?</summary>
+            <p>Fulfillment of Amazon (FBA) is a service provided by Canada prep center that provides storage, packaging & shipping 
+                assistance to sellers whereas Fulfillment by Merchant (FBM) is when sellers choose to list their products
+                 on prep center but manage all storage, shipping, customer support manually.</p>
+        </details>
+        <details>
+            <summary>How Product Return works from Amazon?</summary>
+            <p>Amazon permits customers to return purchased items within a designated return period for a range of reasons, 
+                such as receiving a defective or damaged product, selecting an incorrect item, or opting for a different choice.</p>
+        </details>
+    </section>
+
+   <footer>
+    <%- include('footer') %>
+</footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
