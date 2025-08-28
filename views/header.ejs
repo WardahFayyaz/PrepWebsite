@@ -1,23 +1,87 @@
 <!-- views/partials/header.ejs -->
 <head>
-    <link rel="stylesheet" href="/css/home.css">  <!-- ✅ Include CSS here -->
+    <link rel="stylesheet" href="/css/home.css">
 </head>
+
 <header class="navbar">
-    <div class="logo">
+  <div class="logo">
     <a href="/">
       <img src="/images/logo.jpeg" alt="Canada Prep Solution Logo" class="logo-img">
     </a>
-</div>
+  </div>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/login">Login / Signup</a></li>
-            <li><a href="/FBAprep">FBAprep</a></li>
-            <li><a href="/Pricing">Pricing</a></li>
-        </ul>
-    </nav>
+  <!-- HAMBURGER ICON (Mobile) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- DESKTOP NAV MENU -->
+  <nav class="menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/login">Login / Signup</a></li>
+      <li><a href="/FBAprep">FBAprep</a></li>
+      <li><a href="/Pricing">Pricing</a></li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE DROPDOWN MENU -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/login">Login / Signup</a></li>
+      <li><a href="/FBAprep">FBAprep</a></li>
+      <li><a href="/Pricing">Pricing</a></li>
+    </ul>
+  </nav>
 </header>
+
+<!-- RIGHT before </body> -->
+<script>
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    // Toggle mobile menu when hamburger is clicked
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = hamburger.contains(event.target) || mobileMenu.contains(event.target);
+        
+        if (!isClickInsideNav && mobileMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+    });
+
+    // Close mobile menu on window resize to desktop size
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+    });
+});
+</script>

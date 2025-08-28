@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const path = require('path');
 const mongoose = require("mongoose");
@@ -17,7 +16,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Trust proxy (useful when behind reverse proxy like Nginx/Heroku)
 app.set('trust proxy', 1);
 
 // ========================
@@ -48,7 +46,6 @@ app.get("/fbaprep", (req, res) => res.render("fbaprep"));
 app.get("/terms-of-use", (req, res) => res.render("terms-of-use"));
 app.get("/privacy-policy", (req, res) => res.render("privacy-policy"));
 
-// Routers
 app.use("/auth", authRoutes);     
 app.use("/contact", contactRoutes);
 
@@ -66,21 +63,13 @@ app.use((req, res) => {
 });
 
 // ========================
-// Start Server
+// Export for Vercel & Local Run
 // ========================
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+  });
+}
 
-// ========================
-// Graceful Shutdown
-// ========================
-const shutdown = async (signal) => {
-  console.log(`📴 ${signal} received. Shutting down gracefully...`);
-  await mongoose.connection.close();
-  process.exit(0);
-};
-
-process.on("SIGTERM", () => shutdown("SIGTERM"));
-process.on("SIGINT", () => shutdown("SIGINT"));
+module.exports = app;
