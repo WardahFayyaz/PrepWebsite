@@ -45,6 +45,7 @@ app.get("/pricing", (req, res) => res.render("pricing"));
 app.get("/fbaprep", (req, res) => res.render("fbaprep"));
 app.get("/terms-of-use", (req, res) => res.render("terms-of-use"));
 app.get("/privacy-policy", (req, res) => res.render("privacy-policy"));
+
 app.use("/auth", authRoutes);     
 app.use("/contact", contactRoutes);
 
@@ -62,13 +63,6 @@ app.use((req, res) => {
 });
 
 // ========================
-// Export for Vercel & Local Run
+// Export App (Vercel will use this)
 // ========================
-if (require.main === module) {
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
-}
-
 module.exports = app;
