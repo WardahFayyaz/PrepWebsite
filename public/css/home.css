@@ -46,7 +46,7 @@ ul {
  display: flex;
   justify-content: space-between; /* keeps links on left, hamburger on right */
   align-items: center;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .menu ul {
@@ -71,6 +71,8 @@ ul {
   background-color: yellow;
   color: #003366;
 }
+
+
 
 /* ---------------- Hamburger Menu ---------------- */
 .hamburger {
@@ -259,6 +261,8 @@ ul {
   padding: 2rem;
   margin: 2rem auto;
   width: 95%;
+  max-width: 1200px; /* Prevents extra wide containers */
+  box-sizing: border-box;
 }
 
 .why-choose h2 {
@@ -274,12 +278,56 @@ ul {
 }
 
 .why-columns li {
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   padding: 1.2rem;
   border-radius: 10px;
   font-size: 1rem;
   line-height: 1.5;
+  transition: transform 0.2s ease;
 }
+
+.why-columns li:hover {
+  transform: translateY(-5px);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  .why-choose-container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .why-choose h2 {
+    font-size: 1.6rem;
+  }
+
+  .why-columns {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .why-columns li {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .why-choose h2 {
+    font-size: 1.4rem;
+  }
+
+  .why-columns li {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
 
 /* ---------------- Services ---------------- */
 .services-preview {
@@ -322,7 +370,7 @@ ul {
 }
 
 .card-btn {
-  align-self: flex-start;
+  align-items: center;
   padding: 0.6rem 1.2rem;
   background: #003366;
   color: white;
@@ -374,8 +422,14 @@ ul {
 
 .btn.primary {
   background: #007bff;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 2rem; 
   border-radius: 6px;
+  display: block;        
+  width: 200px;         
+  text-align: center;    
+  margin: 1.5rem auto 0; 
+  font-size: 1.1rem;    
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn.primary:hover {
@@ -402,8 +456,23 @@ ul {
   border-radius: 8px;
   font-size: 1rem;
   text-align: left;
+  overflow: hidden; 
+  transition: max-height 0.8s ease;
 }
 
+.faq summary {
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+}
+
+.faq details[open] {
+  max-height: 500px; 
+}
+
+.faq details:not([open]) {
+  max-height: 40px; 
+}
 /* ---------------- Footer ---------------- */
 .footer {
   background: #003366;

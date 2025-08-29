@@ -1,121 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Styled Banners</title>
-  <link rel="stylesheet" href="/css/services.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Prep Center</title>
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
     <header>
-    <%- include('header') %>
-</header>
-<!-- HTML -->
-<div class="intro-wrapper">
-  <div class="services-intro">
-    <h2>Our Services...</h2>
-    <p>
-      Discover a range of professional services including FBA Prep, FBM Prep, Warehousing & Storage, and E-commerce support. Each service is tailored to streamline your business operations and boost your efficiency.
-    </p>
-  </div>
-</div>
+        <%- include('header') %>
+    </header>
 
-<section class="banners">
-  <!-- FBA PREP -->
-  <div class="banner banner1">
-    <div class="banner-content">
-      <h3>FBA PREP</h3>
-      <button class="details-btn">
-        <span class="btn-text">Details</span>
-        <span class="arrow">▼</span>
-      </button>
+    <!-- REMOVED DUPLICATE MOBILE MENU - it's already in header partial -->
+
+    <div class="intro-wrapper">
+        <div class="services-intro">
+            <h2>Our Services...</h2>
+            <p>
+                Discover a range of professional services including FBA Prep, FBM Prep, Warehousing & Storage, and E-commerce support. Each service is tailored to streamline your business operations and boost your efficiency.
+            </p>
+        </div>
     </div>
-    <div class="service-detail hidden">
-      <p>
-        <strong>Full Amazon FBA Prep:</strong> We handle labeling, bundling, poly bagging, inspection, and shipment creation — ensuring your products meet all of Amazon’s standards.
-      </p>
-    </div>
-  </div>
 
-  <!-- FBM PREP -->
-  <div class="banner banner2">
-    <div class="banner-content">
-      <h3>FBM PREP</h3>
-      <h4>(Coming Soon)</h4>
-      <button class="details-btn">
-        <span class="btn-text">Details</span>
-        <span class="arrow">▼</span>
-      </button>
-    </div>
-    <div class="service-detail hidden">
-      <p>
-        <strong>Upcoming FBM Support:</strong> Get ready for pick, pack, and direct shipping to your customers. Perfect for sellers managing their own fulfillment.
-      </p>
-    </div>
-  </div>
+    <section class="banners">
+        <div class="banner banner1">
+            <div class="banner-content">
+                <h3>FBA PREP</h3>
+                <button class="details-btn">
+                    <span class="btn-text">Details</span>
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="service-detail hidden">
+                <p>
+                    <strong>Full Amazon FBA Prep:</strong> We handle labeling, bundling, poly bagging, inspection, and shipment creation — ensuring your products meet all of Amazon's standards.
+                </p>
+            </div>
+        </div>
 
-  <!-- WAREHOUSING -->
-  <div class="banner banner3">
-    <div class="banner-content">
-      <h3>Warehousing & Storage</h3>
-      <button class="details-btn">
-        <span class="btn-text">Details</span>
-        <span class="arrow">▼</span>
-      </button>
-    </div>
-    <div class="service-detail hidden">
-      <p>
-        <strong>Secure Storage Solutions:</strong> Climate-controlled warehouses with flexible plans for short-term and long-term inventory storage needs.
-      </p>
-    </div>
-  </div>
+        <div class="banner banner2">
+            <div class="banner-content">
+                <h3>FBM PREP</h3>
+                <h4>(Coming Soon)</h4>
+                <button class="details-btn">
+                    <span class="btn-text">Details</span>
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="service-detail hidden">
+                <p>
+                    <strong>Upcoming FBM Support:</strong> Get ready for pick, pack, and direct shipping to your customers. Perfect for sellers managing their own fulfillment.
+                </p>
+            </div>
+        </div>
 
-  <!-- E-COMMERCE -->
-  <div class="banner banner4">
-    <div class="banner-content">
-      <h3>E-commerce</h3>
-      <h4>(Coming Soon)</h4>
-      <button class="details-btn">
-        <span class="btn-text">Details</span>
-        <span class="arrow">▼</span>
-      </button>
-    </div>
-    <div class="service-detail hidden">
-      <p>
-        <strong>End-to-End E-commerce Support:</strong> Product handling, packaging, fulfillment, and returns for Amazon, Shopify, eBay and more.
-      </p>
-    </div>
-  </div>
-</section>
+        <div class="banner banner3">
+            <div class="banner-content">
+                <h3>Warehousing & Storage</h3>
+                <button class="details-btn">
+                    <span class="btn-text">Details</span>
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="service-detail hidden">
+                <p>
+                    <strong>Secure Storage Solutions:</strong> Climate-controlled warehouses with flexible plans for short-term and long-term inventory storage needs.
+                </p>
+            </div>
+        </div>
 
+        <div class="banner banner4">
+            <div class="banner-content">
+                <h3>E-commerce</h3>
+                <h4>(Coming Soon)</h4>
+                <button class="details-btn">
+                    <span class="btn-text">Details</span>
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="service-detail hidden">
+                <p>
+                    <strong>End-to-End E-commerce Support:</strong> Product handling, packaging, fulfillment, and returns for Amazon, Shopify, eBay and more.
+                </p>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <%- include('footer.ejs') %>
-</footer>
-  <script>
-  const buttons = document.querySelectorAll('.details-btn');
-  const detailSections = document.querySelectorAll('.service-detail');
+    <footer>
+        <%- include('footer.ejs') %>
+    </footer>
 
-  buttons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      const detail = detailSections[index];
-      const isOpen = detail.classList.contains('show');
+    <script>
+        // REMOVED CONFLICTING HAMBURGER MENU LOGIC - it's handled in header partial
 
-      // Close all
-      detailSections.forEach(d => d.classList.remove('show'));
-      buttons.forEach(b => {
-        b.classList.remove('active');
-        b.querySelector('.btn-text').textContent = 'Details';
-      });
+        // Banner Button Logic (Keep this - it's specific to services page)
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.details-btn');
+            const detailSections = document.querySelectorAll('.service-detail');
 
-      // Toggle selected
-      if (!isOpen) {
-        detail.classList.add('show');
-        btn.classList.add('active');
-        btn.querySelector('.btn-text').textContent = 'Read Less';
-      }
-    });
-  });
-</script>
+            buttons.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    const detail = detailSections[index];
+                    const isOpen = detail.classList.contains('show');
 
+                    // Close all
+                    detailSections.forEach(d => d.classList.remove('show'));
+                    buttons.forEach(b => {
+                        b.classList.remove('active');
+                        b.querySelector('.btn-text').textContent = 'Details';
+                    });
+
+                    // Toggle selected
+                    if (!isOpen) {
+                        detail.classList.add('show');
+                        btn.classList.add('active');
+                        btn.querySelector('.btn-text').textContent = 'Read Less';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

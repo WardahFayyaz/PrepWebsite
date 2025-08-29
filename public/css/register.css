@@ -2,31 +2,32 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    max-width: 350px;
-    width: 120%;
+    max-width: 400px; /* Slightly wider for better spacing */
+    width: 90%; /* Keep it within screen width */
     box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
     text-align: center;
     color: black;
-    padding: 70px 30px;
+    padding: 40px; /* Adds consistent spacing */
     margin: 20px auto;
+    box-sizing: border-box; /* Prevents padding from breaking layout */
 }
 
 .register-container input {
-    width: 92%;
+    width: 100%;
     padding: 15px;
-    margin: 10px 0;
+    margin: 12px 0;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     background: transparent;
     color: black;
     outline: none;
     font-size: 18px;
-    padding-right: 20px;
+    box-sizing: border-box; /* Ensures no overflow */
 }
 
 .register-container button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: none;
     border-radius: 8px;
     background: linear-gradient(to right, #1e3c72, #2a5298);
@@ -43,24 +44,26 @@
 .register-container h2 {
     color: black;
     font-size: 45px;
+    margin-bottom: 20px;
 }
 
 .register-container p {
     color: #1e3c72;
     font-size: 21px;
+    margin-bottom: 15px;
 }
 
-.register{
+.register {
     padding-top: 90px;
 }
-/* ✅ Responsive */
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    .register-container {
+        padding: 30px;
+    }
     .register-container h2 {
         font-size: 32px;
-    }
-    .register-container input {
-        font-size: 16px;
-        padding: 12px;
     }
     .register-container p {
         font-size: 16px;
@@ -69,18 +72,19 @@
 
 @media (max-width: 480px) {
     .register-container {
-        padding: 25px 20px;
+        padding: 25px;
+        max-width: 90%;
     }
     .register-container h2 {
         font-size: 26px;
     }
     .register-container input {
         font-size: 14px;
-        padding: 10px;
+        padding: 12px;
     }
     .register-container button {
         font-size: 14px;
-        padding: 10px;
+        padding: 12px;
     }
     .register-container p {
         font-size: 14px;

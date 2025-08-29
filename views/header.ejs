@@ -27,6 +27,7 @@
       <li><a href="/login">Login / Signup</a></li>
       <li><a href="/FBAprep">FBAprep</a></li>
       <li><a href="/Pricing">Pricing</a></li>
+      <li><a href="https://wa.me/+14508004990" target="_blank" class="phone-link">📞 +1 (450) 800-4990</a></li>
     </ul>
   </nav>
 
@@ -40,9 +41,36 @@
       <li><a href="/login">Login / Signup</a></li>
       <li><a href="/FBAprep">FBAprep</a></li>
       <li><a href="/Pricing">Pricing</a></li>
+      <li><a href="https://wa.me/+14508004990" target="_blank" class="phone-link">📞 +1 (450) 800-4990</a></li>
     </ul>
   </nav>
+  
 </header>
+
+<!-- Add this CSS to your home.css file -->
+<style>
+.phone-link {
+  color: #25D366 !important; /* WhatsApp green color */
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+  color: #128C7E !important; /* Darker WhatsApp green on hover */
+  transform: scale(1.05);
+}
+
+/* Optional: Style for mobile menu phone link */
+.mobile-menu .phone-link {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white !important;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 5px;
+}
+</style>
 
 <!-- RIGHT before </body> -->
 <script>
@@ -57,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking on a link
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    // Close mobile menu when clicking on a link (except phone link)
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a:not(.phone-link)');
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');

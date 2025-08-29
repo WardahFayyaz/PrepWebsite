@@ -55,20 +55,18 @@ router.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        // check if user exists
         const user = await User.findOne({ email });
         if (!user) {
             return res.send("⚠️ User not found");
         }
 
-        // check password
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.send("❌ Invalid password");
         }
 
-        // success
-        res.send(`✅ Welcome back, ${user.username}!`);
+        // On success - redirect to home
+        res.redirect("/");
     } catch (err) {
         console.error(err);
         res.status(500).send("❌ Error logging in");

@@ -3,14 +3,14 @@
     backdrop-filter: blur(10px);
     border-radius: 15px;
     width: 350px;
+    max-width: 90%; /* Ensures it fits smaller screens */
     box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
     text-align: center;
     color: black;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    padding-left: 55px;
-    padding-right: 55px;
+    padding: 35px 55px;
+    margin: auto;
 }
+
 .login-container input {
     width: 100%;
     padding: 19px 15px;
@@ -22,6 +22,7 @@
     outline: none;
     font-size: 21px;
 }
+
 .login-container button {
     width: 100%;
     padding: 12px;
@@ -38,30 +39,54 @@
     background: linear-gradient(to right, #2a5298, #1e3c72);
 }
 
-.login-container h2{
+.login-container h2 {
     color: black;
-    font-size: 55px;
+    font-size: 2.5rem;
 }
 
 header, footer {
-    flex-shrink: 0; /* Keep header & footer fixed in layout */
+    flex-shrink: 0;
 }
 
 main {
-    flex: 1; /* Take remaining space */
+    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centers login vertically */
-    padding: 40px 0; /* Space from header and footer */
+    align-items: center;
+    padding: 40px 0;
 }
 
-.login-container p{
+.login-container p {
     color: #1e3c72;
     font-size: 20px;
 }
-.loginform{
-    padding-top: 160px;
-    padding-bottom: 50px;
-    padding-left: 550px;
+
+/* Removed large padding and used flex for centering */
+.loginform {
+    padding: 100px 20px 50px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 25px 20px;
+    }
+    .login-container h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .loginform {
+        padding: 80px 10px 40px;
+    }
+    .login-container input {
+        font-size: 18px;
+    }
+    .login-container p {
+        font-size: 16px;
+    }
 }

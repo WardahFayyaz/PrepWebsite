@@ -1,10 +1,113 @@
-<!-- views/partials/footer.ejs -->
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
-  <title>Your Website</title>
-  <link rel="stylesheet" href="your-styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer with Phone Number</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Basic styling for demo */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      padding-top: 50px;
+    }
+
+    /* ---------------- Footer ---------------- */
+    .footer {
+      background: #003366;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.4rem;
+    }
+
+    .footer-section a {
+      color: #ccc;
+      font-size: 1rem;
+      margin: 0.3rem 0;
+      display: block;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      color: yellow;
+    }
+
+    /* Phone number styling */
+    .phone-link {
+      color: #ccc;
+      font-size: 1rem;
+      margin: 0.3rem 0;
+      display: block;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .phone-link:hover {
+      color: yellow;
+    }
+
+    .phone-link i {
+      margin-right: 8px;
+    }
+
+    /* Social icons styling */
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .social-icons a i {
+      font-size: 1.1rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      border-top: 1px solid #ccc;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+    }
+
+    /* Demo content */
+    .demo-content {
+      padding: 2rem;
+      text-align: center;
+      min-height: 60vh;
+    }
+  </style>
 </head>
+<body>
+
+<!-- Demo content to push footer down -->
+<div class="demo-content">
+  <h1>Website Content</h1>
+  <p>This is demo content to show the footer layout. Scroll down to see the footer with the phone number added.</p>
+</div>
 
 <footer class="footer">
   <div class="footer-container">
@@ -12,6 +115,9 @@
       <h4>About Us</h4>
       <a href="/about">Who We Are</a>
       <a href="/contact">Contact</a>
+      <a href="https://wa.me/+14508004990" target="_blank" class="phone-link"></a>
+        <i class="fas fa-phone"></i> +1 450 800-4990
+      </a>
     </div>
     <div class="footer-section">
       <h4>Quick Links</h4>
@@ -38,3 +144,6 @@
     <p>&copy; 2025 Canada Prep Solution. All rights reserved.</p>
   </div>
 </footer>
+
+</body>
+</html>
