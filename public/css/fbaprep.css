@@ -4,7 +4,7 @@
     }
 
     .hero {
-      background-image: url('/images/warehouse1.jpeg'); /* Change to your image name */
+      background-image: url('/images/warehouse1.jpeg'); 
       background-size: cover;
       background-position: center;
       height: 400px;
@@ -50,13 +50,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 60px;
-  background-color: dark grey; /* light grey background */
+  background-color: dark grey; 
   width: 100%;
   box-sizing: border-box;
 }
 
 .fba-section-inner {
-  max-width: 1400px; /* wider content area */
+  max-width: 1400px; 
   margin: auto;
   display: flex;
   align-items: center;
@@ -70,14 +70,14 @@
 }
 
 .fba-text h2 {
-  font-size: 2.8em; /* increased heading font */
+  font-size: 2.8em; 
   font-weight: bold;
   color: #222;
   margin-bottom: 25px;
 }
 
 .fba-text p {
-  font-size: 1.4em; /* increased paragraph font */
+  font-size: 1.4em; 
   line-height: 1.8;
   color: #555;
 }
@@ -118,7 +118,7 @@
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 2s ease-out forwards;
-  opacity: 0; /* Start hidden */
+  opacity: 0; 
 }
 /*----------how it works-----------*/
 body {
@@ -128,7 +128,7 @@ body {
 
    .prep-steps-section {
   background: linear-gradient(to right, #f0f2f5, #e4eaf1);
-  padding: 0; /* was 60px 30px */
+  padding: 0;
 }
 
 
@@ -136,7 +136,7 @@ body {
   max-width: 1300px;
   margin: auto;
   text-align: center;
-  padding: 40px 0; /* Add this to match spacing */
+  padding: 40px 0;
 }
     .prep-steps-container h2 {
       font-size: 3em;
@@ -217,15 +217,15 @@ body {
 .pricing-section {
     background: linear-gradient(to right, #08001a, #003366);
     text-align: center;
-    padding: 0 20px; /* remove top/bottom padding */
+    padding: 0 20px; 
     color: white;
 }
 
-/* Keep text spacing inside content instead */
+
 .pricing-overlay {
     max-width: 800px;
     margin: auto;
-    padding: 40px 0; /* internal spacing for content */
+    padding: 40px 0; 
 }
 
 .pricing-overlay h2 {
@@ -264,8 +264,8 @@ body {
 #testimonials {
     position: relative;
     overflow: hidden;
-    margin: 0; /* no gap */
-    padding: 0 20px; /* remove vertical padding */
+    margin: 0;
+    padding: 0 20px; 
     background: url("/images/review.jpeg") center/cover no-repeat;
 }
 
@@ -284,7 +284,7 @@ body {
     margin: auto;
     text-align: center;
     color: #fff;
-    padding: 40px 0; /* internal spacing for content */
+    padding: 40px 0; 
 }
 
 .testimonials-inner h2 {
@@ -343,7 +343,7 @@ body {
   border: 2px solid #fff;
 }
 
-/* Hide extra reviews by default */
+
 .hidden-review {
   display: none;
 }

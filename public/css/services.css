@@ -19,7 +19,7 @@ ul {
     margin: 0;
 }
 
-/* ---------------- Header & Navbar (Copied from Home Page CSS) ---------------- */
+/* ---------------- Header & Navbar (same as homepage) ---------------- */
 .navbar {
     position: fixed;
     top: 0;
@@ -72,9 +72,9 @@ ul {
     color: #003366;
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
-    display: none; /* Hidden on desktop */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
     padding: 5px;
@@ -93,7 +93,7 @@ ul {
     border-radius: 2px;
 }
 
-/* Hamburger Animation */
+/* Animation */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -106,11 +106,11 @@ ul {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Mobile Menu Dropdown */
+/* Mobile Dropdown */
 .mobile-menu {
     display: none;
-    position: fixed; /* Fixed position */
-    top: 60px; /* Adjust based on navbar height */
+    position: fixed; 
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #003366;
@@ -264,7 +264,6 @@ ul {
     transform: translateY(-5px);
 }
 
-/* Dark overlay for text readability */
 .banner::before {
     content: "";
     position: absolute;

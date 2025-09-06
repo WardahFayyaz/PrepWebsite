@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
-const User = require("../models/user"); // import User model
+const User = require("../models/user"); 
 
 // ========================
 // GET Register Page
 // ========================
 router.get("/register", (req, res) => {
-    res.render("register"); // make sure you have views/register.ejs
+    res.render("register"); 
 });
 
 // ========================
@@ -45,7 +45,7 @@ router.post("/register", async (req, res) => {
 // GET Login Page
 // ========================
 router.get("/login", (req, res) => {
-    res.render("login"); // make sure you have views/login.ejs
+    res.render("login"); 
 });
 
 // ========================
@@ -64,8 +64,6 @@ router.post("/login", async (req, res) => {
         if (!isMatch) {
             return res.send("❌ Invalid password");
         }
-
-        // On success - redirect to home
         res.redirect("/");
     } catch (err) {
         console.error(err);
@@ -79,7 +77,7 @@ router.post("/login", async (req, res) => {
 router.get("/users", async (req, res) => {
     try {
         const users = await User.find();
-        res.json(users); // show all users in JSON format
+        res.json(users); 
     } catch (err) {
         res.status(500).send("❌ Error fetching users");
     }

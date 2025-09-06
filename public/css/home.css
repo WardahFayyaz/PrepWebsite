@@ -44,7 +44,7 @@ ul {
 /* Desktop Menu */
 .menu {
  display: flex;
-  justify-content: space-between; /* keeps links on left, hamburger on right */
+  justify-content: space-between; 
   align-items: center;
   padding: 0 50px;
 }
@@ -80,10 +80,10 @@ ul {
   flex-direction: column;
   cursor: pointer;
   padding: 5px;
-  margin-left: auto;   /* pushes it to the far right */
-  margin-right: 10px;  /* fine-tune distance from edge */
+  margin-left: auto;   
+  margin-right: 10px; 
   z-index: 1001;
-    right: 10px;   /* instead of being flush against edge */
+    right: 10px;   
   position: relative;
 }
 
@@ -96,7 +96,7 @@ ul {
   border-radius: 2px;
 }
 
-/* Hamburger Animation */
+/* Animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -109,7 +109,7 @@ ul {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Mobile Menu Dropdown */
+/* Mobile Dropdown */
 .mobile-menu {
   display: none;
   position: absolute;
@@ -261,7 +261,7 @@ ul {
   padding: 2rem;
   margin: 2rem auto;
   width: 95%;
-  max-width: 1200px; /* Prevents extra wide containers */
+  max-width: 1200px;
   box-sizing: border-box;
 }
 

@@ -29,12 +29,9 @@ function showContent(type) {
 itemBtn.addEventListener("click", () => showContent("item"));
 caseBtn.addEventListener("click", () => showContent("case"));
 
-// Show default
 showContent("item");
  
 //------------services-----------//
-
-// Example JS for interaction (optional)
 document.querySelectorAll('.details-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const serviceName = btn.closest('.banner').querySelector('h3').innerText

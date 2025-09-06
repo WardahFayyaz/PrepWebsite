@@ -1,4 +1,3 @@
-<!-- views/partials/header.ejs -->
 <head>
     <link rel="stylesheet" href="/css/home.css">
 </head>
@@ -10,7 +9,7 @@
     </a>
   </div>
 
-  <!-- HAMBURGER ICON (Mobile) -->
+  <!-- ICON (Mobile) -->
   <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
@@ -46,22 +45,19 @@
   </nav>
   
 </header>
-
-<!-- Add this CSS to your home.css file -->
 <style>
 .phone-link {
-  color: #25D366 !important; /* WhatsApp green color */
+  color: #25D366 !important; 
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .phone-link:hover {
-  color: #128C7E !important; /* Darker WhatsApp green on hover */
+  color: #128C7E !important; 
   transform: scale(1.05);
 }
 
-/* Optional: Style for mobile menu phone link */
 .mobile-menu .phone-link {
   background: linear-gradient(135deg, #25D366, #128C7E);
   color: white !important;
@@ -72,20 +68,17 @@
 }
 </style>
 
-<!-- RIGHT before </body> -->
 <script>
-// Mobile menu toggle functionality
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    // Toggle mobile menu when hamburger is clicked
+    // Toggle mobile menu when icon is clicked
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
         mobileMenu.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking on a link (except phone link)
     const mobileMenuLinks = mobileMenu.querySelectorAll('a:not(.phone-link)');
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -104,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close mobile menu on window resize to desktop size
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
             hamburger.classList.remove('active');

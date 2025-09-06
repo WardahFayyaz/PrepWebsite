@@ -1,10 +1,9 @@
-/* General Body Styling */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #1e3c72, #2a5298);
   color: #fff;
   margin: 0;
-  overflow-x: hidden; /* This is good for preventing horizontal scroll */
+  overflow-x: hidden; 
 }
 
 /* Pricing Section */
@@ -17,7 +16,7 @@ body {
 
 .pricing-content {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap; 
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -28,7 +27,7 @@ body {
 }
 
 .text-column {
-  flex: 1 1 500px; /* Flex-basis ensures it takes up space and wraps */
+  flex: 1 1 500px; 
   text-align: left;
 }
 
@@ -69,11 +68,11 @@ body {
 }
 
 .image-container {
-  flex: 1 1 450px; /* Takes up space and wraps */
+  flex: 1 1 450px; 
   width: 100%;
   max-width: 450px;
   margin-top: 20px;
-  display: flex; /* Centers the image */
+  display: flex; 
   justify-content: center;
 }
 
@@ -288,7 +287,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Responsive adjustments */
+/* Responsiveness */
 @media (max-width: 1024px) {
   .pricing-content {
     flex-direction: column;

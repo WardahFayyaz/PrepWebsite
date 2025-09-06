@@ -2,14 +2,14 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    max-width: 400px; /* Slightly wider for better spacing */
-    width: 90%; /* Keep it within screen width */
+    max-width: 400px; 
+    width: 90%;
     box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
     text-align: center;
     color: black;
-    padding: 40px; /* Adds consistent spacing */
+    padding: 40px; 
     margin: 20px auto;
-    box-sizing: border-box; /* Prevents padding from breaking layout */
+    box-sizing: border-box; 
 }
 
 .register-container input {
@@ -22,7 +22,7 @@
     color: black;
     outline: none;
     font-size: 18px;
-    box-sizing: border-box; /* Ensures no overflow */
+    box-sizing: border-box; 
 }
 
 .register-container button {
@@ -57,7 +57,7 @@
     padding-top: 90px;
 }
 
-/* Responsive Adjustments */
+/* Responsiveness */
 @media (max-width: 768px) {
     .register-container {
         padding: 30px;

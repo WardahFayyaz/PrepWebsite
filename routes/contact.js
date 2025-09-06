@@ -6,7 +6,7 @@ const Contact = require("../models/contact");
 // GET Contact Page
 // ========================
 router.get("/", (req, res) => {
-    res.render("contact"); // make sure you have views/contact.ejs
+    res.render("contact"); 
 });
 
 // ========================

@@ -12,9 +12,6 @@
     <header>
         <%- include('header') %>
     </header>
-
-    <!-- REMOVED DUPLICATE MOBILE MENU - it's already in header partial -->
-
     <div class="intro-wrapper">
         <div class="services-intro">
             <h2>Our Services...</h2>
@@ -93,9 +90,6 @@
     </footer>
 
     <script>
-        // REMOVED CONFLICTING HAMBURGER MENU LOGIC - it's handled in header partial
-
-        // Banner Button Logic (Keep this - it's specific to services page)
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('.details-btn');
             const detailSections = document.querySelectorAll('.service-detail');
