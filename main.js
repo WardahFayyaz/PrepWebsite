@@ -37,15 +37,14 @@ const contactRoutes = require("./routes/contact");
 
 // Static pages
 app.get("/", (req, res) => res.render("home"));
-app.get("/login", (req, res) => res.render("login"));
-app.get("/register", (req, res) => res.render("register"));
+app.use("/auth", authRoutes); 
 app.get("/about", (req, res) => res.render("about"));
 app.get("/services", (req, res) => res.render("services"));
 app.get("/pricing", (req, res) => res.render("pricing"));
 app.get("/fbaprep", (req, res) => res.render("fbaprep"));
 app.get("/terms-of-use", (req, res) => res.render("terms-of-use"));
 app.get("/privacy-policy", (req, res) => res.render("privacy-policy"));
-app.use("/auth", authRoutes);     
+    
 app.use("/contact", contactRoutes);
 
 // ========================
